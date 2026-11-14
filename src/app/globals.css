@@ -386,10 +386,7 @@ figcaption p {
   gap: 19px;
 }
 .web-figure {
-  display: grid;
-  grid-template-columns: 1fr 150px;
-  gap: 18px;
-  align-items: start;
+  display: block;
 }
 .web-figure .screen-button {
   border: 1px solid #d8e5ee;
@@ -398,7 +395,7 @@ figcaption p {
   background: #edf6fb;
 }
 .web-figure figcaption h3 {
-  margin-top: 2px;
+  margin-top: 12px;
 }
 .web-figure figcaption p {
   font-size: 10px;
@@ -406,8 +403,6 @@ figcaption p {
 .web-figure .screen-button > img {
   width: 100%;
   height: auto;
-  max-height: 270px;
-  object-fit: contain;
 }
 .workspace-end {
   text-align: center;
@@ -715,9 +710,6 @@ tbody th {
   .web-gallery {
     gap: 25px;
   }
-  .web-figure {
-    grid-template-columns: 1fr 160px;
-  }
 }
 @media (max-width: 1150px) {
   :root {
@@ -747,10 +739,6 @@ tbody th {
   }
   .page-title {
     font-size: 25px;
-  }
-  .web-figure {
-    grid-template-columns: 1fr 125px;
-    gap: 13px;
   }
   .two-screens {
     padding-left: 45px;
@@ -816,9 +804,6 @@ tbody th {
   }
   .cover-phone {
     width: 120px;
-  }
-  .web-figure {
-    grid-template-columns: 1fr 150px;
   }
   .image-dialog {
     height: 96dvh;
@@ -948,9 +933,6 @@ tbody th {
     padding-left: 23px;
     padding-right: 23px;
     gap: 20px;
-  }
-  .web-figure {
-    display: block;
   }
   .web-figure figcaption h3 {
     margin: 9px 0 4px;
@@ -1204,15 +1186,15 @@ tbody th {
     gap: 6mm;
   }
   .web-figure {
-    display: grid;
-    grid-template-columns: 1fr 42mm;
-    gap: 5mm;
+    display: block;
   }
   .web-figure figcaption p {
     font-size: 7.5pt;
   }
-  .web-figure .screen-button > img {
-    max-height: 65mm;
+  .paper:has(.web-gallery) {
+    height: auto;
+    min-height: 297mm;
+    break-inside: auto;
   }
   .document-note {
     padding: 4mm 5mm;
